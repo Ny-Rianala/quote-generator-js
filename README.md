@@ -67,3 +67,9 @@ You can use whatever resource you need for this project. You can use the interne
 -   Clean code (indentation, comments, clear variables and functions names)
 
 ## Good luck, and happy coding ✨
+
+## Explanation
+1I have tried to solve the first challenge, and I use method to make them work:
+-  Using prompt to let users write words in it.
+-  Adding function called quote.
+-  Using for loop to check the user's input.  
