@@ -33,25 +33,31 @@
   };
 
 //1. use prompt to ask the user how many times we want to generate a random quote
-  const quoteNumber = prompt("Number of quotes ( 1 to 5):");
+   const quoteNumber = prompt("Number of quotes ( 1 to 5):");
 //2. check if the prompt give us something between 1 and 5
   if (quoteNumber >= 1 && quoteNumber <= 5){
 // //3. we're going to use a loop somewhere, and it's going to last the number of times that the user entered in the prompt!
-  for (let i = 0; i < quoteNumber; i++){
+  for (let i = 1; i < quoteNumber; i++){
 // //4. refactor our code into a function, and put the function call inside the loop
 // //4.1 generate random numbers
 //4.2 show the generated quotes
   let quote = generateQuote();
   console.log(quote);
   }
+
   }else{
     console.error('We need a number between 1 and 5');
 }
 
 // Types of quotation generators
-//Check if the prompt show us between Yes or No
-quoteGenerated = prompt("Do you want to continue:");
-  while (quoteGenerated === "Yes"  || quoteGenerated === "No"){
-    let quoteGenerated = generateQuote();
-    console.log(quoteGenerated);
-}
+const newGeneratedQuote = () => {
+  let newQuote = `${quote1} ${quote2} ${quote3}`;
+  console.log(newQuote);
+};
+
+const quoteGenerated = prompt("Do you want to continue:");
+//Check if the prompt show us yes
+  while (quoteGenerated === "yes"){
+    let newQuote = newGeneratedQuote();
+    console.log(newQuote);
+  }
